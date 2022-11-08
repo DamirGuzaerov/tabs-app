@@ -1,0 +1,26 @@
+<app-tabs>
+  <app-tab-item tabTitle="Income">
+    <app-table
+      [tableConfig]="trService.transactionTableConfig"
+      [tableRows]="trService.getTransactionListByType('income')">
+    </app-table>
+  </app-tab-item>
+  <app-tab-item tabTitle="Outcome">
+    <app-table
+      [tableConfig]="trService.transactionTableConfig"
+      [tableRows]="trService.getTransactionListByType('outcome')">
+    </app-table>
+  </app-tab-item>
+  <app-tab-item tabTitle="loan">
+    <app-table
+      [tableConfig]="trService.transactionTableConfig"
+      [tableRows]="trService.getTransactionListByType('loan')">
+    </app-table>
+  </app-tab-item>
+  <app-tab-item tabTitle="investment">
+    <app-table
+      [tableConfig]="trService.transactionTableConfig"
+      [tableRows]="trService.getTransactionListByType('investment')">
+    </app-table>
+  </app-tab-item>
+</app-tabs>

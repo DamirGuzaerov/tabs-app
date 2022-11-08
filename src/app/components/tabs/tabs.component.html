@@ -1,0 +1,14 @@
+<ul class="list-group d-flex">
+  <ul class="nav nav-tabs">
+    <li
+      class="nav-item"
+      *ngFor="let tab of tabs; index as i" (click)="selectTab(tab)">
+      <a
+        class="nav-link"
+        routerLink="/navigator"
+        [class.active]="tab.active"
+        [queryParams]="{tab:i}">{{tab.tabTitle}}</a>
+    </li>
+  </ul>
+</ul>
+<ng-content></ng-content>
